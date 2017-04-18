@@ -17,28 +17,30 @@ import random
 # Queen Spades
 # 11 cards - 3 Clubs, 3 Diamonds, 3 Hearts, 2 Spades
 
-class Card():
-    def __init__(self, card_color = 'Hearts', value = 9):
-        self.card_color = card_color
-        self.value = value
         
     
-class Deck(Card):
+class Deck():
+    list_of_cards = []
     def __init__(self, whole_number):
         self.whole_number = whole_number
-        self.list_of_cards = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
         print(self.whole_number, "cards - ", card.value, card.card_color)
         
     def shuffle(self):
         for i in range(len(self.list_of_cards)):
-            self.list_of_cards[i] = random.randint(1,12)
+            self.list_of_cards[0] = random.randint()
         return self.list_of_cards
         
     def draw(self):
         pass
         
+class Card(Deck):
+    def __init__(self, value, card_color,):
+        self.value = value
+        self.card_color = card_color
+        self.list_of_cards.append([self.value, self.card_color,])
 
-card = Card()
+
+card = Card(3, "Spades")
 deck = Deck(12)
 print(deck)
 shuffle = deck.shuffle()
@@ -46,4 +48,13 @@ print(shuffle)
 top_card = deck.draw()
 print(top_card)
 print(deck)
+
+
+
+
+
+
+
+
+
 
