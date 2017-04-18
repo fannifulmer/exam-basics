@@ -1,5 +1,5 @@
 import sys
-import shutil
+#import shutil
 # This should be the basic replica of the 'cp' command
 # If ran from the command line without arguments
 # It should print out the usage:
@@ -15,9 +15,9 @@ def arguments():
     elif len(sys.argv) != 3:
         print("No destination provided")
     else:
-        try:
-            shutil.copyfile(sys.argv[1], sys.argv[2])
-        except IOError:
-            print('source file does not exist')
-            
+        file_from = open(sys.argv[1], 'r+')
+        file_copy = file_from.read()
+        file_to = open(sys.argv[2], 'w')
+        file_to.write(str(file_copy))
+
 arguments()
