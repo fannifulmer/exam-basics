@@ -7,6 +7,6 @@ def odd_average(numbers):
     for number in range(len(numbers)):
         if numbers[number] % 2 != 0:
             new_list.append(numbers[number])
-    return new_list
+    return sum(new_list) / len(new_list)
     
 print(odd_average(numbers))
