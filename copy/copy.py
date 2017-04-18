@@ -15,9 +15,12 @@ def arguments():
     elif len(sys.argv) != 3:
         print("No destination provided")
     else:
-        file_from = open(sys.argv[1], 'r+')
-        file_copy = file_from.read()
-        file_to = open(sys.argv[2], 'w')
-        file_to.write(str(file_copy))
+        try:
+            file_from = open(sys.argv[1], 'r+')
+            file_copy = file_from.read()
+            file_to = open(sys.argv[2], 'w')
+            file_to.write(str(file_copy))
+        except IOError:
+            print("File does not exist")
 
 arguments()
