@@ -1,3 +1,4 @@
+import random
 # Create a Card class, that has a color and a value
 # Create a constructor for setting those values
 # Card should be represented as string in this format:
@@ -17,24 +18,31 @@
 # 11 cards - 3 Clubs, 3 Diamonds, 3 Hearts, 2 Spades
 
 class Card():
-    def __init__(self, value):
-        card = ""
-        pass
+    def __init__(self, card_color = 'Hearts', value = 9):
+        self.card_color = card_color
+        self.value = value
+        
     
-class Deck():
+class Deck(Card):
     def __init__(self, whole_number):
-        list_of_cards = []
+        self.whole_number = whole_number
+        self.list_of_cards = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
+        print(self.whole_number, "cards - ", card.value, card.card_color)
         
     def shuffle(self):
-        pass
+        for i in range(len(self.list_of_cards)):
+            self.list_of_cards[i] = random.randint(1,12)
+        return self.list_of_cards
         
     def draw(self):
         pass
         
 
-
+card = Card()
 deck = Deck(12)
 print(deck)
+shuffle = deck.shuffle()
+print(shuffle)
 top_card = deck.draw()
 print(top_card)
 print(deck)
