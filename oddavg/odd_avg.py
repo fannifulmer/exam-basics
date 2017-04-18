@@ -4,9 +4,11 @@
 
 def odd_average(numbers):
     new_list = []
-    for number in range(len(numbers)):
-        if numbers[number] % 2 != 0:
-            new_list.append(numbers[number])
-    return sum(new_list) / len(new_list)
-    
-(odd_average([1, 2, 3, 4]))
+    try:
+        for number in range(len(numbers)):
+            if numbers[number] % 2 != 0:
+                new_list.append(numbers[number])
+        return sum(new_list) / len(new_list)
+    except ZeroDivisionError:
+        return None
+print(odd_average([2, 4, 6, 8, 9]))
