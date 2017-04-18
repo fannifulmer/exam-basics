@@ -15,6 +15,9 @@ def arguments():
     elif len(sys.argv) != 3:
         print("No destination provided")
     else:
-        shutil.copyfile(sys.argv[1], sys.argv[2])
+        try:
+            shutil.copyfile(sys.argv[1], sys.argv[2])
+        except IOError:
+            print('source file does not exist')
             
 arguments()
