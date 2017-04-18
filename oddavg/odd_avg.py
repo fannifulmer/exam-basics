@@ -11,4 +11,4 @@ def odd_average(numbers):
         return sum(new_list) / len(new_list)
     except ZeroDivisionError:
         return None
-print(odd_average([2, 4, 6, 8, 9]))
+odd_average([2, 3, 4])
