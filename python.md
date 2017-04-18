@@ -36,14 +36,14 @@ The application is accepted if:
 
 #### Your answer:
 [add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
-6:   
-7:   
+1:   def is the keyword for your function it is followed by the 
+2:   name of the function, you can name it whatever you want
+3:   inside the parentheses are the functions arguments, parameters. You can define parameters here
+4:   This is the code block of your function, this should be indented
+5:   This is a new variable that the function can return to, add pass back expressions
+6:   The return statement exits the function and passes back an expression to the caller
+7:   This tells the function where to return the value
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
+[a constructor is used in classes, its a special method, it looks like this: def __init__(self), if you instantiate your class, it will automatically will be called, it will pass all the arguments that it contains. It's the first method in the class.]
